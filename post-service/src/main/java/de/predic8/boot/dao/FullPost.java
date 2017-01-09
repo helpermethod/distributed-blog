@@ -1,23 +1,16 @@
-package de.predic8.boot.domain;
+package de.predic8.boot.dao;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import java.util.List;
 
-@Entity
-public class Post {
-    @Id
-    @GeneratedValue
-    private Long id;
+public class FullPost {
     private String title;
     private String content;
+    private List<Comment> comments;
 
-    protected Post() {
-    }
-
-    public Post(String title, String content) {
+    public FullPost(String title, String content, List<Comment> comments) {
         this.title = title;
         this.content = content;
+        this.comments = comments;
     }
 
     public String getTitle() {
@@ -36,7 +29,11 @@ public class Post {
         this.content = content;
     }
 
-    public Long getId() {
-        return id;
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 }

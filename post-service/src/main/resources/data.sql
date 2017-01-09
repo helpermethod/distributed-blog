@@ -1,0 +1,2 @@
+INSERT INTO post (title, content) VALUES ('What is Spring?', 'The Spring Framework is a Java platform that provides comprehensive infrastructure support for developing Java applications.')
+INSERT INTO post (title, content) VALUES ('What is Spring Boot??', 'Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".')

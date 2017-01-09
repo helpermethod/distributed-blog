@@ -1,9 +1,13 @@
 package de.predic8.boot.domain;
 
-import org.springframework.data.annotation.Id;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
 public class Comment {
     @Id
+    @GeneratedValue
     private String id;
     private String content;
     private Long postId;
@@ -22,5 +26,9 @@ public class Comment {
 
     public void setPostId(Long postId) {
         this.postId = postId;
+    }
+
+    public String getId() {
+        return id;
     }
 }
