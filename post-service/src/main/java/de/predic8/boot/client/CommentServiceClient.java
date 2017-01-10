@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient(value = "comment-service")
+@FeignClient(value = "comment-service", fallback = CommentServiceClientFallback.class)
 public interface CommentServiceClient {
-    @RequestMapping(method = RequestMethod.GET, value = "/comments/findByPostId")
+    @RequestMapping(method = RequestMethod.GET, value = "/comments")
     List<Comment> findByPostId(@RequestParam("postId") Long postId);
 }
