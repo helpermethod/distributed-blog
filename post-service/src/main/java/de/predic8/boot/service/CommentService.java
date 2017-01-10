@@ -28,7 +28,7 @@ public class CommentService {
                 postId).getBody();
     }
 
-    private List<Comment> findByPostIdFallback() {
+    private List<Comment> findByPostIdFallback(Long postId) {
         return Collections.emptyList();
     }
 }
